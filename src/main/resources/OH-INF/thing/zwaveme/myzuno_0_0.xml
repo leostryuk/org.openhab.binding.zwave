@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="zwave"
+                          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                          xmlns:thing="https://openhab.org/schemas/thing-description/v1.0.0"
+                          xsi:schemaLocation="https://openhab.org/schemas/thing-description/v1.0.0
+                      https://openhab.org/schemas/thing-description/v1.0.0">
+    <thing-type id="zwaveme_myzuno_00_000" listed="false">
+        <label>Z-uno Light Dimmer &amp;&amp; Valves &amp;&amp; Motion &amp;&amp;</label>
+        <description><![CDATA[
+Wall Controller<br /> <h1>Overview</h1><p>The Z-Wave.Me Wall Controller is a Z-Wave device that can both control other Z-Wave devices and activate predefined scenes in an IP gateway. Although it is controlling other devices, the Wall Controller cannot act as Z-Wave network controller (primary or secondary) and will always need a ZWave network controller to be included into a Z-Wave network. The device can be used in different modes that are selected by configuration parameters:</p> <ol><li>Control of groups of other Z-Wave devices using 'ON', 'OFF' and Dim commands.</li> <li>Activation of predefined scenes in Gateways or other Z-Wave devices.</li> </ol><p>This device support secure communication when included by a controller that also supports secure communication. The device will then send all commands as secure commands unless the receiving device can not accept them. Then the command is send the normal way automatically.</p> <p>The device can be operated in two different modes:</p> <ul><li>Operation Mode: This is the mode where the device is controlling other Z-Wave devices or is activating scenes.</li> <li>Management Mode: The device is turned into the management mode by pushing all four buttons for 5 sec. A blinking green LED indicates the management mode. In the management mode the buttons of the device have different functions. If no further action is performed, the device will turn back to the normal mode after 10 sec. Any management action terminates the management mode as well.</li> </ul><p>In management mode the following actions can be performed:</p> <ul><li>Button 1 - Re-Inclusion/Exclusion: Every re-inclusion or exclusion attempt is confirmed by hitting this button. Any button press stops the mode as well.</li> <li>Button 2 - Send Node Information Frame and Wake up Notification.</li> <li>Button 3 - Factory Default Reset. After clicking on button 3 keep button 4 pushed for &gt;4 seconds</li> <li>Button 4 - Enter into Association mode to assign target devices to one of the four association. Refer to the manuals section about association for more information how to set and unset association groups.</li> </ul><p><strong>Factory Reset</strong></p> <p>The device can be set back to factory defaults without performing an exclusion process. Please executes the following steps: (1) Turn the device into Management Mode, (2) click on Button 3, (3) keep button 4 pushed for 4 seconds.</p> <br /> <h2>Inclusion Information</h2><p> Push button 1 in management mode</p> <br /> <h2>Exclusion Information</h2><p> Push button 1 in management mode</p> <br /> <h2>Wakeup Information</h2><p>It is possible to manually wake up the device by pushing button 2 in management mode.</p>
+    ]]></description>
+        <category>WallSwitch</category>
+
+        <!-- CHANNEL DEFINITIONS -->
+        <channels>
+            <!--Dimmers-->
+            <channel id="switch_dimmer1" typeId="switch_dimmer">
+                <label>Dimmer-1</label>
+                <properties>
+                    <property name="binding:*:PercentType">COMMAND_CLASS_SWITCH_MULTILEVEL:1,COMMAND_CLASS_BASIC:1
+                    </property>
+                    <property name="binding:Command:OnOffType">COMMAND_CLASS_SWITCH_MULTILEVEL:1</property>
+                </properties>
+            </channel>
+            <channel id="switch_dimmer2" typeId="switch_dimmer">
+                <label>Dimmer-2</label>
+                <properties>
+                    <property name="binding:*:PercentType">COMMAND_CLASS_SWITCH_MULTILEVEL:2,COMMAND_CLASS_BASIC:2
+                    </property>
+                    <property name="binding:Command:OnOffType">COMMAND_CLASS_SWITCH_MULTILEVEL:2</property>
+                </properties>
+            </channel>
+            <channel id="switch_dimmer3" typeId="switch_dimmer">
+                <label>Dimmer-3</label>
+                <properties>
+                    <property name="binding:*:PercentType">COMMAND_CLASS_SWITCH_MULTILEVEL:3,COMMAND_CLASS_BASIC:3
+                    </property>
+                    <property name="binding:Command:OnOffType">COMMAND_CLASS_SWITCH_MULTILEVEL:3</property>
+                </properties>
+            </channel>
+            <channel id="switch_dimmer4" typeId="switch_dimmer">
+                <label>Dimmer-4</label>
+                <properties>
+                    <property name="binding:*:PercentType">COMMAND_CLASS_SWITCH_MULTILEVEL:4,COMMAND_CLASS_BASIC:4
+                    </property>
+                    <property name="binding:Command:OnOffType">COMMAND_CLASS_SWITCH_MULTILEVEL:4</property>
+                </properties>
+            </channel>
+            <channel id="switch_dimmer5" typeId="switch_dimmer">
+                <label>Dimmer-5</label>
+                <properties>
+                    <property name="binding:*:PercentType">COMMAND_CLASS_SWITCH_MULTILEVEL:5,COMMAND_CLASS_BASIC:5
+                    </property>
+                    <property name="binding:Command:OnOffType">COMMAND_CLASS_SWITCH_MULTILEVEL:5</property>
+                </properties>
+            </channel>
+            <channel id="switch_dimmer6" typeId="switch_dimmer">
+                <label>Dimmer-6</label>
+                <properties>
+                    <property name="binding:*:PercentType">COMMAND_CLASS_SWITCH_MULTILEVEL:6,COMMAND_CLASS_BASIC:6
+                    </property>
+                    <property name="binding:Command:OnOffType">COMMAND_CLASS_SWITCH_MULTILEVEL:6</property>
+                </properties>
+            </channel>
+            <channel id="switch_dimmer7" typeId="switch_dimmer">
+                <label>Dimmer-7</label>
+                <properties>
+                    <property name="binding:*:PercentType">COMMAND_CLASS_SWITCH_MULTILEVEL:7,COMMAND_CLASS_BASIC:7
+                    </property>
+                    <property name="binding:Command:OnOffType">COMMAND_CLASS_SWITCH_MULTILEVEL:7</property>
+                </properties>
+            </channel>
+            <channel id="switch_dimmer8" typeId="switch_dimmer">
+                <label>Dimmer-8</label>
+                <properties>
+                    <property name="binding:*:PercentType">COMMAND_CLASS_SWITCH_MULTILEVEL:8,COMMAND_CLASS_BASIC:8
+                    </property>
+                    <property name="binding:Command:OnOffType">COMMAND_CLASS_SWITCH_MULTILEVEL:8</property>
+                </properties>
+            </channel>
+            <channel id="switch_dimmer9" typeId="switch_dimmer">
+                <label>Dimmer-9</label>
+                <properties>
+                    <property name="binding:*:PercentType">COMMAND_CLASS_SWITCH_MULTILEVEL:9,COMMAND_CLASS_BASIC:9
+                    </property>
+                    <property name="binding:Command:OnOffType">COMMAND_CLASS_SWITCH_MULTILEVEL:9</property>
+                </properties>
+            </channel>
+            <channel id="switch_dimmer10" typeId="switch_dimmer">
+                <label>Dimmer-10</label>
+                <properties>
+                    <property name="binding:*:PercentType">COMMAND_CLASS_SWITCH_MULTILEVEL:10,COMMAND_CLASS_BASIC:10
+                    </property>
+                    <property name="binding:Command:OnOffType">COMMAND_CLASS_SWITCH_MULTILEVEL:10</property>
+                </properties>
+            </channel>
+            <!--Motion Sensors-->
+         <!--   <channel id="alarm_motion1" typeId="alarm_motion">
+                <label>Motion Alarm-1</label>
+                <properties>
+                    <property name="binding:*:OnOffType">COMMAND_CLASS_ALARM:1</property>
+                </properties>
+            </channel>
+            <channel id="alarm_motion2" typeId="alarm_motion">
+                <label>Motion Alarm-2</label>
+                <properties>
+                    <property name="binding:*:OnOffType">COMMAND_CLASS_ALARM:2</property>
+                </properties>
+            </channel>
+            <channel id="alarm_motion3" typeId="alarm_motion">
+                <label>Motion Alarm-3</label>
+                <properties>
+                    <property name="binding:*:OnOffType">COMMAND_CLASS_ALARM:3</property>
+                </properties>
+            </channel>
+            <channel id="alarm_motion4" typeId="alarm_motion">
+                <label>Motion Alarm-4</label>
+                <properties>
+                    <property name="binding:*:OnOffType">COMMAND_CLASS_ALARM:4</property>
+                </properties>
+            </channel>
+            -->
+            <!--Door sensors-->
+<!--            
+            <channel id="sensor_door1" typeId="sensor_door">
+                <label>Door Sensor 1</label>
+                <properties>
+                    <property name="binding:*:OpenClosedType">COMMAND_CLASS_SENSOR_BINARY:1,COMMAND_CLASS_BASIC:1
+                    </property>
+                </properties>
+            </channel>
+            <channel id="sensor_door2" typeId="sensor_door">
+                <label>Door Sensor 2</label>
+                <properties>
+                    <property name="binding:*:OpenClosedType">COMMAND_CLASS_SENSOR_BINARY:2,COMMAND_CLASS_BASIC:2
+                    </property>
+                </properties>
+            </channel>
+            <channel id="sensor_door3" typeId="sensor_door">
+                <label>Door Sensor 3</label>
+                <properties>
+                    <property name="binding:*:OpenClosedType">COMMAND_CLASS_SENSOR_BINARY:3,COMMAND_CLASS_BASIC:3
+                    </property>
+                </properties>
+            </channel> -->
+            <!--Water flood sensors-->
+       <!--     <channel id="alarm_flood1" typeId="alarm_flood">
+                <label>Alarm (flood)</label>
+                <properties>
+                    <property name="binding:*:OnOffType">COMMAND_CLASS_ALARM:1;type=FLOOD</property>
+                </properties>
+            </channel>
+            <channel id="alarm_flood2" typeId="alarm_flood">
+                <label>Alarm (flood)-2</label>
+                <properties>
+                    <property name="binding:*:OnOffType">COMMAND_CLASS_ALARM:2;type=FLOOD</property>
+                </properties>
+            </channel>
+            -->
+            <!--Valves-->
+            <!--<channel id="switch_binary1" typeId="switch_binary">
+                <label>Valve 1</label>
+                <properties>
+                    <property name="binding:*:OnOffType">COMMAND_CLASS_SWITCH_BINARY:1,COMMAND_CLASS_BASIC:1</property>
+                </properties>
+            </channel>
+            <channel id="switch_binary2" typeId="switch_binary">
+                <label>Valve 2</label>
+                <properties>
+                    <property name="binding:*:OnOffType">COMMAND_CLASS_SWITCH_BINARY:2,COMMAND_CLASS_BASIC:2</property>
+                </properties>
+            </channel>
+            <channel id="switch_binary3" typeId="switch_binary">
+                <label>Valve 3</label>
+                <properties>
+                    <property name="binding:*:OnOffType">COMMAND_CLASS_SWITCH_BINARY:3,COMMAND_CLASS_BASIC:3</property>
+                </properties>
+            </channel>
+            <channel id="switch_binary4" typeId="switch_binary">
+                <label>Valve 4</label>
+                <properties>
+                    <property name="binding:*:OnOffType">COMMAND_CLASS_SWITCH_BINARY:4,COMMAND_CLASS_BASIC:4</property>
+                </properties>
+            </channel>
+            <channel id="switch_binary5" typeId="switch_binary">
+                <label>Valve 5</label>
+                <properties>
+                    <property name="binding:*:OnOffType">COMMAND_CLASS_SWITCH_BINARY:5,COMMAND_CLASS_BASIC:5</property>
+                </properties>
+            </channel> -->
+            <!--POWER SWITCHES-->
+           <!-- <channel id="switch_binary6" typeId="switch_binary">
+                <label>Switch 6</label>
+                <properties>
+                    <property name="binding:*:OnOffType">COMMAND_CLASS_SWITCH_BINARY:6,COMMAND_CLASS_BASIC:6</property>
+                </properties>
+            </channel>
+            <channel id="switch_binary7" typeId="switch_binary">
+                <label>Switch 7</label>
+                <properties>
+                    <property name="binding:*:OnOffType">COMMAND_CLASS_SWITCH_BINARY:7,COMMAND_CLASS_BASIC:7</property>
+                </properties>
+            </channel>
+            <channel id="switch_binary8" typeId="switch_binary">
+                <label>Switch 8</label>
+                <properties>
+                    <property name="binding:*:OnOffType">COMMAND_CLASS_SWITCH_BINARY:8,COMMAND_CLASS_BASIC:8</property>
+                </properties>
+            </channel>
+            <channel id="switch_binary9" typeId="switch_binary">
+                <label>Switch 9</label>
+                <properties>
+                    <property name="binding:*:OnOffType">COMMAND_CLASS_SWITCH_BINARY:9,COMMAND_CLASS_BASIC:9</property>
+                </properties>
+            </channel> -->
+
+
+            <!--            <channel id="sensor_binary" typeId="sensor_binary">-->
+            <!--                <label>Binary Sensor</label>-->
+            <!--                <properties>-->
+            <!--                    <property name="binding:*:OnOffType">COMMAND_CLASS_SENSOR_BINARY</property>-->
+            <!--                </properties>-->
+            <!--            </channel>-->
+
+
+        </channels>
+
+        <properties>
+            <property name="vendor">ZWave.ME</property>
+            <property name="modelId">Light&amp;valves&amp;water&amp;motion</property>
+            <property name="manufacturerId">0115</property>
+            <property name="manufacturerRef">0111:ABBA</property>
+            <property name="dbReference">9000</property>
+        </properties>
+        <config-description>
+
+            <!-- GROUP DEFINITIONS -->
+            <parameter-group name="configuration">
+                <context>setup</context>
+                <label>Configuration Parameters</label>
+            </parameter-group>
+
+            <parameter-group name="association">
+                <context>link</context>
+                <label>Association Groups</label>
+            </parameter-group>
+
+
+            <!-- PARAMETER DEFINITIONS -->
+            <parameter name="config_64_2" type="integer" groupName="configuration"
+                       min="0" max="255">
+                <label>Channel 1 propagation setup</label>
+                <description><![CDATA[
+Select propagation destination or disable output
+        ]]></description>
+                <default>255</default>
+                <options>
+                    <option value="0">Propagate to dmx ch1</option>
+                    <option value="1">Propagate to dmx ch2</option>
+                    <option value="2">Propagate to dmx ch3</option>
+                    <option value="3">Propagate to dmx ch4</option>
+                    <option value="4">Propagate to dmx ch5</option>
+                    <option value="5">Propagate to dmx ch6</option>
+                    <option value="6">Propagate to dmx ch7</option>
+                    <option value="7">Propagate to dmx ch8</option>
+                    <option value="8">Propagate to dmx ch9</option>
+                    <option value="9">Propagate to dmx ch10</option>
+                </options>
+                <limitToOptions>true</limitToOptions>
+            </parameter>
+            <parameter name="config_65_2" type="integer" groupName="configuration"
+                       min="0" max="255">
+                <label>Channel 2 propagation setup</label>
+                <description><![CDATA[
+Select propagation destination or disable output
+        ]]></description>
+                <default>255</default>
+                <options>
+                    <option value="0">Propagate to dmx ch1</option>
+                    <option value="1">Propagate to dmx ch2</option>
+                    <option value="2">Propagate to dmx ch3</option>
+                    <option value="3">Propagate to dmx ch4</option>
+                    <option value="4">Propagate to dmx ch5</option>
+                    <option value="5">Propagate to dmx ch6</option>
+                    <option value="6">Propagate to dmx ch7</option>
+                    <option value="7">Propagate to dmx ch8</option>
+                    <option value="8">Propagate to dmx ch9</option>
+                    <option value="9">Propagate to dmx ch10</option>
+                </options>
+                <limitToOptions>true</limitToOptions>
+            </parameter>
+            <parameter name="config_66_2" type="integer" groupName="configuration"
+                       min="0" max="255">
+                <label>Channel 3 propagation setup</label>
+                <description><![CDATA[
+Select propagation destination or disable output
+        ]]></description>
+                <default>255</default>
+                <options>
+                    <option value="0">Propagate to dmx ch1</option>
+                    <option value="1">Propagate to dmx ch2</option>
+                    <option value="2">Propagate to dmx ch3</option>
+                    <option value="3">Propagate to dmx ch4</option>
+                    <option value="4">Propagate to dmx ch5</option>
+                    <option value="5">Propagate to dmx ch6</option>
+                    <option value="6">Propagate to dmx ch7</option>
+                    <option value="7">Propagate to dmx ch8</option>
+                    <option value="8">Propagate to dmx ch9</option>
+                    <option value="9">Propagate to dmx ch10</option>
+                </options>
+                <limitToOptions>true</limitToOptions>
+            </parameter>
+            <parameter name="config_67_2" type="integer" groupName="configuration"
+                       min="0" max="255">
+                <label>Channel 4 propagation setup</label>
+                <description><![CDATA[
+Select propagation destination or disable output
+        ]]></description>
+                <default>255</default>
+                <options>
+                    <option value="0">Propagate to dmx ch1</option>
+                    <option value="1">Propagate to dmx ch2</option>
+                    <option value="2">Propagate to dmx ch3</option>
+                    <option value="3">Propagate to dmx ch4</option>
+                    <option value="4">Propagate to dmx ch5</option>
+                    <option value="5">Propagate to dmx ch6</option>
+                    <option value="6">Propagate to dmx ch7</option>
+                    <option value="7">Propagate to dmx ch8</option>
+                    <option value="8">Propagate to dmx ch9</option>
+                    <option value="9">Propagate to dmx ch10</option>
+                </options>
+                <limitToOptions>true</limitToOptions>
+            </parameter>
+        </config-description>
+    </thing-type>
+</thing:thing-descriptions>
