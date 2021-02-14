@@ -3,7 +3,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:binding="http://eclipse.org/smarthome/schemas/binding/v1.0.0"
 	xsi:schemaLocation="http://eclipse.org/smarthome/schemas/binding/v1.0.0 http://eclipse.org/smarthome/schemas/binding-1.0.0.xsd">
 
-	<name>Z-Wave Binding</name>
+	<name>Z-Wave Binding Patched By Leo</name>
 	<description>
 	   <![CDATA[
 	   The ZWave binding supports an interface to a wireless Z-Wave home automation network. 
